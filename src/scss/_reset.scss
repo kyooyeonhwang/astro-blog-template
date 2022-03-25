@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+$vw-viewport: 320;
+
+@function get-vw($target) {
+  @return ($target / ($vw-viewport * 0.01 * 1px)) * 1vw
+}
+
+$color: #17f522;
+

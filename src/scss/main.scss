@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@import "reset";
+
+$vw-viewport: 320;
+
+@function get-vw($target) {
+  @return ($target / ($vw-viewport * 0.01 * 1px)) * 1vw
+}
+
+html, body {
+  --color: #a70f0f;
+  height: 100%;
+  background-color: var(--color);
+  // color: $color;
+  // font-size: get-vw(21px)
+}
+
+
+// section {
+//   display: flex;
+//   font-size: 12px;
+// }
