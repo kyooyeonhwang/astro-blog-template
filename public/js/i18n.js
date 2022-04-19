@@ -4,8 +4,8 @@ let list = {
     en: "Artians provide search advertising services optimized for each country with a wide range of global search advertising runs on 80 countries."
   },
   company02: {
-    ko: "아티언스는 Display ad를 위한 최고 수준의 플래너와 엔지니어가 함께 차별적인 디스플레이 광고 서비스를 제공합니다.",
-    en: "Artians offers a different display advertising service with the highest level of planner and engineer for Display AD."
+    ko: "아티언스는 Display ad를 위한 최고 <br class='bbr'>수준의 플래너와 엔지니어가 함께 차별적인 디스플레이 광고 서비스를 제공합니다.",
+    en: "Artians offers a different display <br class='bbr'>advertising service with the highest level of planner and engineer for Display AD."
   },
   company03: {
     ko: "가치의 완성을 위해 언제나 노력하는 아티언스입니다.",

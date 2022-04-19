@@ -8,8 +8,13 @@
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ (
+  
 	{
 		// Set "renderers" to "[]" to disable all default, builtin component support.
 		// renderers: [],
+    buildOptions: {
+      // Example: Generate `page.html` instead of `page/index.html` during build.
+      //  pageUrlFormat: 'file'
+    }
 	}
 );
