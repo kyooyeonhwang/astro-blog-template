@@ -2,8 +2,11 @@
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import MainHead from '../components/MainHead.astro'
+// import langChange from '../../public/js/utillity'
 
 const { lang, title, description, head } = Astro.props;
+const { id } = Astro.params;
+// console.log(lang2)
 ---
 <html lang={lang}>
 <!-- <html lang='en' class='no-js'> -->
@@ -13,7 +16,8 @@ const { lang, title, description, head } = Astro.props;
   </head>
   <body>
       <Header/>
-      <main tabindex='-1' id='main-content' class='wrapper grid-container'>
+      {id}
+      <main id='main-content' class='wrapper grid-container'>
         <slot />
       </main>
       <Footer />

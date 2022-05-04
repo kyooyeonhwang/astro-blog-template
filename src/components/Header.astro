@@ -18,7 +18,9 @@ const pages = {
 	}
 };
 
-const requestPathname = Astro.request.url.pathname;
+// const requestPathname = Astro.request.url.pathname;
+const requestPathname = Astro.resolve();
+console.log(requestPathname)
 
 ---
 <a class="skip-link wrapper" href="#main-content">Skip to content</a>

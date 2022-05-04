@@ -3,6 +3,9 @@ const url = window.location.href;
 // const 
 // console.log(url.split('/'));
 
-let params = new URLSearchParams(document.location.search);
+let params = new URL(window.location.href);
+let lang = params.searchParams.get('lang');
+console.log(lang)
 
-console.log(params.get('lang'))
+// console.log(langChange)
+// console.log(document.location)
