@@ -4,19 +4,20 @@ import Footer from '../components/Footer.astro'
 import MainHead from '../components/MainHead.astro'
 // import langChange from '../../public/js/utillity'
 
-const { lang, title, description, head } = Astro.props;
-const { id } = Astro.params;
-// console.log(lang2)
+
+
+const { lang, title, description, head, permalink  } = Astro.props;
+// const { id } = Astro.params;
+// console.log(permalink)
 ---
 <html lang={lang}>
 <!-- <html lang='en' class='no-js'> -->
   <head>
-    {head}
-    <MainHead title={title} description={description} />
+    <MainHead title={title} description={description}/>
   </head>
   <body>
       <Header/>
-      {id}
+      <div>{lang}</div>
       <main id='main-content' class='wrapper grid-container'>
         <slot />
       </main>

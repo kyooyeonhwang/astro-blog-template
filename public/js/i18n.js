@@ -1,6 +1,6 @@
 let list = {
   company01: {
-    ko: "아티언스는 80여 개국 대상으로 다양한 규모의 글로벌 검색광고 운영 노하우로 각 국가에 최적화된 검색광고 서비스를 제공합니다",
+    ko: "아티언스는 <strong>80여</strong> 개국 대상으로 다양한 규모의 글로벌 검색광고 운영 노하우로 각 국가에 최적화된 검색광고 서비스를 제공합니다",
     en: "Artians provide search advertising services optimized for each country with a wide range of global search advertising runs on 80 countries."
   },
   company02: {
