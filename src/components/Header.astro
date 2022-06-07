@@ -38,9 +38,10 @@ const url = new URL(Astro.request.url);
       <ul class="nav-list">
         {Object.values(pages).map(entry => {
           const className = url.pathname === entry.url && 'active';
+          const currentPage = url.pathname === entry.url && 'page';
           return (
             <li>
-              <a class={className} href={entry.url}>{entry.title}</a>
+              <a href={entry.url} class={className} aria-current={currentPage}>{entry.title}</a>
             </li>
           )
         })}
