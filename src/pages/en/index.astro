@@ -14,9 +14,9 @@ const list2 = list;
 
 const lang = 'en';
 // Data Fetching: fetch recent posts
-let allPosts = Astro.fetchContent('../../posts/*.md');
-allPosts = allPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-const recentPosts = allPosts.slice(0, 3)
+// let allPosts = Astro.glob('../../posts/*.md');
+// allPosts = allPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+// const recentPosts = allPosts.slice(0, 3)
 
 ---
 <MainLayout 
@@ -28,5 +28,5 @@ const recentPosts = allPosts.slice(0, 3)
     <p>{list2.company01[lang]}</p>
     <p>{list2.company02[lang]}</p>
     <p><img src="../../../public/images/i18n_${lang}.png"></p>
-    <PostList posts={recentPosts} />
+    <!-- <PostList posts={recentPosts} /> -->
 </MainLayout>

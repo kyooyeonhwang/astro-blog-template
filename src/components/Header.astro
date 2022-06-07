@@ -18,41 +18,32 @@ const pages = {
 	}
 };
 
+const url = new URL(Astro.request.url);
 // const requestPathname = Astro.request.url.pathname;
-const requestPathname = Astro.resolve();
-console.log(requestPathname)
+// const requestPathname = Astro.resolve();
+// console.log(requestPathname)
 
 ---
-<a class="skip-link wrapper" href="#main-content">Skip to content</a>
-<header role="banner" class="wrapper flex-container">
-    <a href="/" aria-label="Astromnl - home" class="site-head-brand">
-        <img loading="eager" src="/code.svg" alt="Astromnl logo." height="80" width="80">
+<script>
+  // const requestPathname = new URL(Astro.request.url);
+  // console.log(requestPathname)
+</script>
+  <a class="skip-link wrapper" href="#main-content">Skip to content</a>
+  <header role="banner" class="wrapper flex-container">
+    <a href="/" class="site-head-brand">
+      <img loading="eager" src="/code.svg" alt="Astromnl logo." height="80" width="80">
     </a>
 
     <nav class="site-navigation" aria-label="Primary">
-        <ul class="nav-list">
-            {Object.values(pages).map(entry => {
-                const className = requestPathname === entry.url && 'active';
-                return (
-                    <li>
-                        <a class={className} href={entry.url}>{entry.title}</a>
-                    </li>
-                )
-            })}
-        </ul>
+      <ul class="nav-list">
+        {Object.values(pages).map(entry => {
+          const className = url.pathname === entry.url && 'active';
+          return (
+            <li>
+              <a class={className} href={entry.url}>{entry.title}</a>
+            </li>
+          )
+        })}
+      </ul>
     </nav>
-</header>
-
-<style>
-
-a {
-	border-bottom: 2px solid transparent;
-}
-
-a.active {
-	border-bottom-color: var(--color-active);
-    color: var(--color-active);
-    text-underline-offset: var(--nav-underline-offset);
-    text-decoration-thickness: 20%;
-}
-</style>
+  </header>

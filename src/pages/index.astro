@@ -3,30 +3,28 @@
 import MainLayout from '../layouts/MainLayout.astro'
 // Component Imports
 import Button from '../components/Button.astro'
+// import list from '../../public/js/i18n.js';
 
-import list from '../../public/js/i18n.js';
+const response = await fetch('http://localhost:3000/public/js/i18n.json');
+const data = await response.json();
 
+// const list2 = list;
 
-// let lang2 = langChange();
-// console.log(langChange)
-
-
-const list2 = list;
 
 // console.log(params.searchParams.get('lang'))
-const lang = 'en';
+
 const result = import.meta.env.PUBLIC_POKEAPI;
+
+const lang = 'ko';
+const title = 'index page';
+const description = 'Hey! This is Astromnl a simple Astro blog template.';
 ---
-<MainLayout 
-  lang={lang}
-  title="Home11" 
-  description={`Hey! This is Astromnl a simple Astro blog template.`}>
-    <h1 class="font-size-3"><Fragment set:html={list2.company01[lang]}></Fragment></h1>
-    <p class="lead-paragraph"><Fragment set:html={list2.company02[lang]}></Fragment></p>
-    <!-- {langChange2} -->
-    <Button/>
-    <p><Fragment set:html={list2.company02[lang]}></Fragment></p>
-    <p><Fragment set:html={list2.company03[lang]}></Fragment></p>
+<MainLayout {lang} {title} {description}>
+    <h1 class="font-size-3"><Fragment set:html={data.company01[lang]}></Fragment></h1>
+    <p class="lead-paragraph"><Fragment set:html={data.company02[lang]}></Fragment></p>
+    <div class="json-test"><Fragment set:html={data.company01[lang]}></Fragment></div>
+    <p><Fragment set:html={data.company02[lang]}></Fragment></p>
+    <p><Fragment set:html={data.company03[lang]}></Fragment></p>
     <p><img src="../../public/images/i18n_${lang}.png"></p>
     <!-- <PostList posts={recentPosts} /> -->
 </MainLayout>

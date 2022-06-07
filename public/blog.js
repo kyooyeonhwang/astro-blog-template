@@ -7,7 +7,7 @@ import PostList from '../../components/PostList.astro'
 import Pagination from '../../components/Pagination.astro'
 
 const PAGE_SIZE = 3;
-const allPosts = Astro.fetchContent('../../posts/*.md');
+const allPosts = Astro.glob('../../posts/*.md');
 const allSortedPosts = allPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export async function getStaticPaths({ paginate, rss }) {

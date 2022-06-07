@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import 'variable';
 
+:root {
+  --main-bg-color: brown;
+}
+
 *,
 *::before,
 *::after {
@@ -8,7 +12,7 @@
 }
 
 body {
-  background-color: gray;
+  background-color: #fff;
 }
 
 body,

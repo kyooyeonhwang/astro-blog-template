@@ -10,17 +10,17 @@ const { lang, title, description, head, permalink  } = Astro.props;
 // const { id } = Astro.params;
 // console.log(permalink)
 ---
-<html lang={lang}>
-<!-- <html lang='en' class='no-js'> -->
-  <head>
-    <MainHead title={title} description={description}/>
-  </head>
-  <body>
-      <Header/>
-      <div>{lang}</div>
-      <main id='main-content' class='wrapper grid-container'>
-        <slot />
-      </main>
-      <Footer />
-  </body>
+<html {lang}>
+<head>
+  <MainHead {title} {description}/>
+</head>
+<body>
+<div class="container">
+  <Header/>
+  <main id='main-content' class='wrapper grid-container'>
+    <slot />
+  </main>
+  <Footer />
+</div>
+</body>
 </html>
