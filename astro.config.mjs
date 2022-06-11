@@ -15,5 +15,6 @@ export default defineConfig({
   build: {
     // Example: Generate `page.html` instead of `page/index.html` during build.
     format: 'file'
-  }
+  },
+  server: {port: 3000, host: true}
 })

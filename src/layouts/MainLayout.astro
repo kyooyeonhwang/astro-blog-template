@@ -6,9 +6,10 @@ import MainHead from '../components/MainHead.astro'
 
 
 
-const { lang, title, description, head, permalink  } = Astro.props;
+const { title, description, permalink  } = Astro.props;
 // const { id } = Astro.params;
 // console.log(permalink)
+const lang = 'ko';
 ---
 <html {lang}>
 <head>
@@ -16,7 +17,7 @@ const { lang, title, description, head, permalink  } = Astro.props;
 </head>
 <body>
 <div class="container">
-  <Header/>
+  <Header />
   <main id='main-content' class='wrapper grid-container'>
     <slot />
   </main>
