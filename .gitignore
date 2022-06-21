@@ -20,6 +20,6 @@ yarn-error.log*
 # vs-code-specific files
 .vscode
 
-*.css
+# *.css
 *.css.map
 
